@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="net.androidbootcamp.anagram.NewGame">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="The New Game Screen"
+        tools:layout_editor_absoluteX="121dp"
+        tools:layout_editor_absoluteY="61dp" />
+
+
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="260dp"
+        android:layout_height="83dp"
+        android:text="Anagram RealTime Display"
+        tools:layout_editor_absoluteY="157dp"
+        tools:layout_editor_absoluteX="79dp"
+        android:textSize="32sp"/>
+
+    <Button
+        android:id="@+id/button5"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:text="A"
+        tools:layout_editor_absoluteX="33dp"
+        tools:layout_editor_absoluteY="344dp" />
+
+    <Button
+        android:id="@+id/button6"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:text="B"
+        tools:layout_editor_absoluteY="344dp"
+        tools:layout_editor_absoluteX="108dp" />
+
+    <Button
+        android:id="@+id/button7"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:text="C"
+        tools:layout_editor_absoluteY="344dp"
+        tools:layout_editor_absoluteX="188dp" />
+
+    <Button
+        android:id="@+id/button8"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:text="D"
+        tools:layout_editor_absoluteY="344dp"
+        tools:layout_editor_absoluteX="280dp" />
+
+    <Button
+        android:id="@+id/button9"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:text="E"
+        tools:layout_editor_absoluteY="409dp"
+        tools:layout_editor_absoluteX="33dp" />
+
+    <Button
+        android:id="@+id/button10"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:text="F"
+        tools:layout_editor_absoluteY="409dp"
+        tools:layout_editor_absoluteX="108dp" />
+
+    <Button
+        android:id="@+id/button11"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:text="G"
+        tools:layout_editor_absoluteY="409dp"
+        tools:layout_editor_absoluteX="188dp" />
+
+    <Button
+        android:id="@+id/button12"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:text="H"
+        tools:layout_editor_absoluteY="409dp"
+        tools:layout_editor_absoluteX="280dp" />
+</android.support.constraint.ConstraintLayout>

@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="net.androidbootcamp.anagram.MainActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Anagram Game"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginBottom="468dp" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="126dp"
+        android:layout_height="wrap_content"
+        android:text="New Game"
+        tools:layout_editor_absoluteY="34dp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="126dp"
+        android:layout_height="wrap_content"
+        android:text="Continue"
+        tools:layout_editor_absoluteX="233dp"
+        tools:layout_editor_absoluteY="101dp" />
+
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="126dp"
+        android:layout_height="wrap_content"
+        android:text="Select Stage"
+        tools:layout_editor_absoluteY="162dp"
+        tools:layout_editor_absoluteX="233dp" />
+
+    <Button
+        android:id="@+id/button4"
+        android:layout_width="126dp"
+        android:layout_height="wrap_content"
+        android:text="About"
+        tools:layout_editor_absoluteY="229dp"
+        tools:layout_editor_absoluteX="233dp" />
+
+    <android.support.constraint.Guideline
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/guideline"
+        app:layout_constraintGuide_begin="20dp"
+        android:orientation="horizontal"
+        tools:layout_editor_absoluteY="20dp"
+        tools:layout_editor_absoluteX="0dp" />
+
+</android.support.constraint.ConstraintLayout>
