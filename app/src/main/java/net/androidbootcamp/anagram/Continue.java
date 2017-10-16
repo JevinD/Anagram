@@ -24,9 +24,9 @@ public class Continue extends AppCompatActivity implements View.OnClickListener{
         protected void onCreate(Bundle savedInstanceState) {
             super.onCreate(savedInstanceState);
             setContentView(R.layout.activity_main);
-            wordTv = (TextView) findViewById(R.id.wordTv);
-            wordEnteredTv = (EditText) findViewById(R.id.wordEnteredEt);
-            validate = (Button) findViewById(R.id.validate);
+            //wordTv = (TextView) findViewById(R.id.wordTv);
+           // wordEnteredTv = (EditText) findViewById(R.id.wordEnteredEt);
+          //  validate = (Button) findViewById(R.id.validate);
             validate.setOnClickListener(this);
             newGame = (Button) findViewById(R.id.newGame);
             newGame.setOnClickListener(this);
@@ -47,7 +47,7 @@ public class Continue extends AppCompatActivity implements View.OnClickListener{
             String w = wordEnteredTv.getText().toString();
 
             if (wordToFind.equals(w)) {
-                Toast.makeText(this, "Congratulations ! You found the word " + wordToFind, Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, "Congratulations! You found the word " + wordToFind, Toast.LENGTH_SHORT).show();
                 newGame();
             } else {
                 Toast.makeText(this, "Retry !", Toast.LENGTH_SHORT).show();

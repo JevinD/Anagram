@@ -4,7 +4,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import java.util.Random;
 
-public class NewGame
+public class NewGame extends AppCompatActivity
 {
     public static final Random RANDOM = new Random();
     public static final String[] WORDS = { "ACCOUNT","BULLIE","PIECES"};
@@ -13,6 +13,12 @@ public class NewGame
         return WORDS[RANDOM.nextInt(WORDS.length)];
     }
 
+    @Override
+    protected void onCreate(Bundle savedInstanceState)
+    {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_new_game);
+    }
     public static String shuffleWord(String word)
     {
         if(word !=null && !"".equals(word))
