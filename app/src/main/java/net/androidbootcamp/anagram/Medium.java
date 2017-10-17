@@ -33,10 +33,12 @@ public class Medium extends AppCompatActivity
     protected void onCreate(Bundle savedInstanceState)
     {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_new_game);
+        setContentView(R.layout.activity_medium);
         edText1 = (EditText) findViewById(R.id.editText1);
         onClickListenerButton();
-
+        SharedPreferences sharedPreferences = PreferenceManager.getDefaultSharedPreferences(getApplicationContext());
+        final SharedPreferences.Editor sharedEditor = sharedPreferences.edit();
+        counter = sharedPreferences.getInt("score", 0);
         scrambledWordView = (TextView) findViewById(R.id.textView2);
         scoreView = (TextView) findViewById(R.id.textView3);
         scrambledWordView.setText(shuffleWord(MEDIUMWORDS[randomIndex]));
@@ -49,10 +51,8 @@ public class Medium extends AppCompatActivity
                     @Override
                     public void onClick(View v) {
                         if(edText1.getText().toString().equals(MEDIUMWORDS[randomIndex])){
-                            SharedPreferences mPrefs = getSharedPreferences("score", counter);
-                            SharedPreferences.Editor mEditor = mPrefs.edit();
-                            mEditor.putInt("score", ++counter).commit();
-                            Toast.makeText(Medium.this, "Score: " + mPrefs.getInt("score", counter) + "/4", Toast.LENGTH_LONG).show();
+
+                            Toast.makeText(Medium.this, "Score: " + ++counter + "/4", Toast.LENGTH_LONG).show();
                             Intent intent = new Intent(getApplicationContext(), NewGame.class);
                             startActivity(intent);
                         }

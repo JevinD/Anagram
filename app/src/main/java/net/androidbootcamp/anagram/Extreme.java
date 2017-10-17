@@ -27,14 +27,14 @@ public class Extreme extends AppCompatActivity
     int randomIndex = RANDOM.nextInt(EXTREMEWORDS.length - 1);
     public static String randomWord()
     {
-        return EXTREMEWORDS[RANDOM.nextInt(EXTREMEWORDS.length)];
+        return EXTREMEWORDS[RANDOM.nextInt(EXTREMEWORDS.length - 1)];
     }
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
     {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_new_game);
+        setContentView(R.layout.activity_extreme);
         edText1 = (EditText) findViewById(R.id.editText1);
         onClickListenerButton();
 

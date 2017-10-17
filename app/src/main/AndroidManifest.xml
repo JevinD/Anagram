@@ -18,6 +18,10 @@
         <activity android:name=".Continue"/>
         <activity android:name=".Stage" />
         <activity android:name=".Credits"/>
+        <activity android:name=".Hard"/>
+        <activity android:name=".Medium"/>
+        <activity android:name=".Extreme"/>
+        <activity android:name=".NewGame"/>
     </application>
 
 </manifest>

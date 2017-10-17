@@ -35,7 +35,7 @@ public class Hard extends AppCompatActivity
     protected void onCreate(Bundle savedInstanceState)
     {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_new_game);
+        setContentView(R.layout.activity_hard);
         edText1 = (EditText) findViewById(R.id.editText1);
         onClickListenerButton();
 

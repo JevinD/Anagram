@@ -29,7 +29,7 @@ public class NewGame extends AppCompatActivity
     int randomIndex = RANDOM.nextInt(EASYWORDS.length - 1);
     public static String randomWord()
     {
-        return EASYWORDS[RANDOM.nextInt(EASYWORDS.length)];
+        return EASYWORDS[RANDOM.nextInt(EASYWORDS.length - 1)];
     }
 
     @Override
@@ -43,7 +43,9 @@ public class NewGame extends AppCompatActivity
         scrambledWordView = (TextView) findViewById(R.id.textView2);
         scoreView = (TextView) findViewById(R.id.textView3);
         scrambledWordView.setText(shuffleWord(EASYWORDS[randomIndex]));
-
+        SharedPreferences sharedPreferences = PreferenceManager.getDefaultSharedPreferences(getApplicationContext());
+        final SharedPreferences.Editor sharedEditor = sharedPreferences.edit();
+        counter = sharedPreferences.getInt("score", 0);
     }
     public void onClickListenerButton() {
         validateButton = (Button) findViewById(R.id.validateBtn);
@@ -52,10 +54,7 @@ public class NewGame extends AppCompatActivity
                     @Override
                     public void onClick(View v) {
                         if(edText1.getText().toString().equals(EASYWORDS[randomIndex])){
-                            SharedPreferences mPrefs = getSharedPreferences("score", counter);
-                            SharedPreferences.Editor mEditor = mPrefs.edit();
-                            mEditor.putInt("score", ++counter).commit();
-                            Toast.makeText(NewGame.this, "Score: " + mPrefs.getInt("score", counter) + "/4", Toast.LENGTH_LONG).show();
+                            Toast.makeText(NewGame.this, "Score: " + ++counter + "/4", Toast.LENGTH_LONG).show();
                             Intent intent = new Intent(getApplicationContext(), NewGame.class);
                             startActivity(intent);
                         }

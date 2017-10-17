@@ -32,7 +32,7 @@
         android:id="@+id/textView3"
         android:layout_width="260dp"
         android:layout_height="83dp"
-        android:text="Unscambled Word"
+        android:text="Unscramble Word Below"
         tools:layout_editor_absoluteY="157dp"
         tools:layout_editor_absoluteX="79dp"
         android:textSize="32sp" />
