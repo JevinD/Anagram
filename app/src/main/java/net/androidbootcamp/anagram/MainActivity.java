@@ -11,6 +11,7 @@ public class MainActivity extends AppCompatActivity{
     private Button cont;
     private Button selectStage;
     private Button about;
+    private boolean isReturning = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
@@ -37,8 +38,10 @@ public class MainActivity extends AppCompatActivity{
                 new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        Intent intent = new Intent(getApplicationContext(), Continue.class);
-                        startActivity(intent);
+                        if(isReturning) {
+                            Intent intent = new Intent(getApplicationContext(), Continue.class);
+                            startActivity(intent);
+                        }
                     }
                 });
         selectStage.setOnClickListener(

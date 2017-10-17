@@ -13,7 +13,7 @@ import android.widget.Toast;
 
 import java.util.Random;
 import java.util.Timer;
-public class NewGame extends AppCompatActivity
+public class Medium extends AppCompatActivity
 {
     public Timer timer= new Timer();
     private TextView scrambledWordView;
@@ -22,14 +22,11 @@ public class NewGame extends AppCompatActivity
     private int counter = 0;
     private EditText edText1;
     public static final Random RANDOM = new Random();
-    public static final String[] EASYWORDS = {"APP","CAT","TIC","ROW"};
     public static final String[] MEDIUMWORDS = {"BULL","LIVE","HOLE","EASY"};
-    public static final String[] HARDWORDS = {"APPLE","PROVE","PLACE","SPACE"};
-    public static final String[] EXTREMEWORDS = {"ACCOUNT","BULLIE","PIECES","COMPLETE"};
-    int randomIndex = RANDOM.nextInt(EASYWORDS.length - 1);
+    int randomIndex = RANDOM.nextInt(MEDIUMWORDS.length - 1);
     public static String randomWord()
     {
-        return EASYWORDS[RANDOM.nextInt(EASYWORDS.length)];
+        return MEDIUMWORDS[RANDOM.nextInt(MEDIUMWORDS.length)];
     }
 
     @Override
@@ -42,7 +39,7 @@ public class NewGame extends AppCompatActivity
 
         scrambledWordView = (TextView) findViewById(R.id.textView2);
         scoreView = (TextView) findViewById(R.id.textView3);
-        scrambledWordView.setText(shuffleWord(EASYWORDS[randomIndex]));
+        scrambledWordView.setText(shuffleWord(MEDIUMWORDS[randomIndex]));
 
     }
     public void onClickListenerButton() {
@@ -51,16 +48,16 @@ public class NewGame extends AppCompatActivity
                 new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        if(edText1.getText().toString().equals(EASYWORDS[randomIndex])){
+                        if(edText1.getText().toString().equals(MEDIUMWORDS[randomIndex])){
                             SharedPreferences mPrefs = getSharedPreferences("score", counter);
                             SharedPreferences.Editor mEditor = mPrefs.edit();
                             mEditor.putInt("score", ++counter).commit();
-                            Toast.makeText(NewGame.this, "Score: " + mPrefs.getInt("score", counter) + "/4", Toast.LENGTH_LONG).show();
+                            Toast.makeText(Medium.this, "Score: " + mPrefs.getInt("score", counter) + "/4", Toast.LENGTH_LONG).show();
                             Intent intent = new Intent(getApplicationContext(), NewGame.class);
                             startActivity(intent);
                         }
                         else{
-                            Toast.makeText(NewGame.this, "Incorrect, try again", Toast.LENGTH_LONG).show();
+                            Toast.makeText(Medium.this, "Incorrect, try again", Toast.LENGTH_LONG).show();
                         }
                     }
                 });
@@ -83,6 +80,5 @@ public class NewGame extends AppCompatActivity
         }
         return word;
     }
-
 
 }
