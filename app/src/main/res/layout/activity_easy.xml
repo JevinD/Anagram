@@ -9,26 +9,17 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:layout_gravity="center">
 
         <TextView
             android:id="@+id/textView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Medium"
-            android:textSize="24sp"
+            android:text="Start a New Game"
             tools:layout_editor_absoluteX="121dp"
-            tools:layout_editor_absoluteY="61dp" />
-
-        <TextView
-            android:id="@+id/timerValue"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="37dp"
-            android:textSize="40sp"
-            android:textColor="#000000"
-            android:text="00:00:000" />
-
+            tools:layout_editor_absoluteY="61dp"
+            android:gravity="center"/>
 
         <TextView
             android:id="@+id/textView2"
@@ -37,16 +28,19 @@
             android:text="Anagram RealTime Display"
             tools:layout_editor_absoluteY="157dp"
             tools:layout_editor_absoluteX="79dp"
-            android:textSize="32sp"/>
+            android:textSize="32sp"
+            android:gravity="center_horizontal"
+            />
 
         <TextView
             android:id="@+id/textView3"
             android:layout_width="260dp"
             android:layout_height="83dp"
-            android:text="Unscramble Word Below"
+            android:text="Unscambled Word"
             tools:layout_editor_absoluteY="157dp"
             tools:layout_editor_absoluteX="79dp"
-            android:textSize="32sp" />
+            android:textSize="32sp"
+            android:gravity="center_horizontal"/>
 
         <EditText
             android:id="@+id/editText1"
@@ -55,7 +49,8 @@
             android:layout_weight="1"
             android:ems="10"
             android:inputType="textPersonName"
-            android:text="" />
+            android:text=""
+            android:gravity="center_horizontal"/>
 
         <Button
             android:id="@+id/validateBtn"
@@ -63,7 +58,8 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:ems="10"
-            android:text="Check Answer" />
+            android:text="Check Answer"
+            android:gravity="center_horizontal"/>
 
     </LinearLayout>
 </LinearLayout>
