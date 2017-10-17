@@ -16,7 +16,6 @@
             </intent-filter>
         </activity>
         <activity android:name=".Continue"/>
-        <activity android:name=".NewGame" />
         <activity android:name=".Stage" />
         <activity android:name=".Credits"/>
     </application>
